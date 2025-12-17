@@ -22,42 +22,42 @@ Chaque type de fichier a son propre parser, mais ils travaillent ensemble pour f
 Avant de comprendre le parsing, visualisons la structure d'un fichier `.fic` :
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│              Header (20+ bytes)                         │
-├─────────────────────────────────────────────────────────┤
-│ Offset │ Taille │ Description                           │
+┌──────────────────────────────────────────────────────────┐
+│              Header (20+ bytes)                          │
+├──────────────────────────────────────────────────────────┤
+│ Offset │ Taille │ Description                            │
 ├────────┼────────┼────────────────────────────────────────┤
-│ 0x00   │ 4      │ Magic bytes: "PCS\0" ou "FIC\0"      │
-│ 0x04   │ 2      │ Version du format                    │
-│ 0x06   │ 2      │ Padding                              │
-│ 0x08   │ 2      │ Record length (u16)                  │
-│ 0x0A   │ 2      │ Record count (u16)                   │
-│ 0x0C   │ 2      │ Padding                              │
-│ 0x0E   │ 2      │ Deleted count (u16)                  │
-│ 0x10   │ 2      │ Padding                              │
-│ 0x12   │ 2      │ Flags                                │
-│ 0x14   │ ...    │ Données supplémentaires (optionnel)   │
+│ 0x00   │ 4      │ Magic bytes: "PCS\0" ou "FIC\0"        │
+│ 0x04   │ 2      │ Version du format                      │
+│ 0x06   │ 2      │ Padding                                │
+│ 0x08   │ 2      │ Record length (u16)                    │
+│ 0x0A   │ 2      │ Record count (u16)                     │
+│ 0x0C   │ 2      │ Padding                                │
+│ 0x0E   │ 2      │ Deleted count (u16)                    │
+│ 0x10   │ 2      │ Padding                                │
+│ 0x12   │ 2      │ Flags                                  │
+│ 0x14   │ ...    │ Données supplémentaires (optionnel)    │
 └────────┴────────┴────────────────────────────────────────┘
                     │
                     ▼
-┌─────────────────────────────────────────────────────────┐
-│            Records (à partir de data_offset)            │
-├─────────────────────────────────────────────────────────┤
-│ Record 0:                                               │
+┌────────────────────────────────────────────────────────┐
+│            Records (à partir de data_offset)           │
+├────────────────────────────────────────────────────────┤
+│ Record 0:                                              │
 │   ┌─────────────────────────────────────────────────┐  │
-│   │ Flag (1 byte): 0 = actif, 1 = supprimé        │  │
-│   │ Data (record_length - 1 bytes)                 │  │
-│   │ Memo pointers (optionnel)                      │  │
+│   │ Flag (1 byte): 0 = actif, 1 = supprimé          │  │
+│   │ Data (record_length - 1 bytes)                  │  │
+│   │ Memo pointers (optionnel)                       │  │
 │   └─────────────────────────────────────────────────┘  │
-│                                                         │
-│ Record 1:                                               │
+│                                                        │
+│ Record 1:                                              │
 │   ┌─────────────────────────────────────────────────┐  │
 │   │ ...                                             │  │
 │   └─────────────────────────────────────────────────┘  │
-│                                                         │
-│ Record N:                                               │
-│   ...                                                   │
-└─────────────────────────────────────────────────────────┘
+│                                                        │
+│ Record N:                                              │
+│   ...                                                  │
+└────────────────────────────────────────────────────────┘
 ```
 
 ---

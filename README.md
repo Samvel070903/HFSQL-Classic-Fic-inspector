@@ -1,4 +1,5 @@
 # FIC Engine & Inspector
+
 <div align="center">
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)
@@ -9,7 +10,7 @@
 
 **Solution professionnelle pour l'accès, l'inspection et la migration des données HFSQL/HyperFile**
 
-[Installation](#-installation) • [Documentation](#-documentation) • [API](#-api-rest) • [Support](#-support--maintenance-commerciale)
+[Installation](#installation) • [Documentation](#documentation) • [API](#api-rest) • [Support](#support--maintenance-commerciale)
 
 </div>
 
@@ -24,23 +25,23 @@
 
 ---
 
-## 📋 Table des matières
+## Table des matières
 
-- [Présentation](#-présentation)
-- [Fonctionnalités](#-fonctionnalités)
-- [Installation](#-installation)
-- [Démarrage rapide](#-démarrage-rapide)
-- [Configuration](#-configuration)
-- [API REST](#-api-rest)
-- [Interface graphique](#-interface-graphique)
-- [Architecture](#-architecture)
-- [Sécurité & Conformité](#-sécurité--conformité)
-- [Support & Maintenance](#-support--maintenance-commerciale)
-- [Licence](#-licence)
+- [Présentation](#présentation)
+- [Fonctionnalités](#fonctionnalités)
+- [Installation](#installation)
+- [Démarrage rapide](#démarrage-rapide)
+- [Configuration](#configuration)
+- [API REST](#api-rest)
+- [Interface graphique](#interface-graphique)
+- [Architecture](#architecture)
+- [Sécurité & Conformité](#sécurité--conformité)
+- [Support & Maintenance](#support--maintenance-commerciale)
+- [Licence](#licence)
 
 ---
 
-## 🎯 Présentation
+## Présentation
 
 **FIC Engine & Inspector** est une solution logicielle professionnelle conçue pour permettre l'accès, l'inspection, la migration et la manipulation des données stockées dans les formats propriétaires **HFSQL/HyperFile** (extensions `.fic`, `.mmo`, `.ndx`).
 
@@ -57,19 +58,19 @@ Les fichiers HFSQL/HyperFile sont des formats binaires propriétaires utilisés 
 
 FIC Engine & Inspector offre :
 
-✅ **Lecture native** des formats `.fic`, `.mmo`, `.ndx` sans dépendance à l'application source  
-✅ **API REST moderne** pour intégration avec vos systèmes  
-✅ **Interface graphique intuitive** pour inspection et navigation  
-✅ **Support SQL/ODBC** pour requêtes avancées et migration  
-✅ **Export multi-formats** (JSON, CSV) pour migration et archivage  
-✅ **Conformité RGPD/CNIL** pour la protection des données  
-✅ **Cross-platform** (Windows, Linux, macOS)  
+- **Lecture native** des formats `.fic`, `.mmo`, `.ndx` sans dépendance à l'application source
+- **API REST moderne** pour intégration avec vos systèmes
+- **Interface graphique intuitive** pour inspection et navigation
+- **Support SQL/ODBC** pour requêtes avancées et migration
+- **Export multi-formats** (JSON, CSV) pour migration et archivage
+- **Conformité RGPD/CNIL** pour la protection des données
+- **Cross-platform** (Windows, Linux, macOS)
 
 ---
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
-### 🔧 Moteur de parsing
+### Moteur de parsing
 
 - **Parsing binaire complet** des formats HFSQL
   - Format `.fic` : Enregistrements structurés avec header binaire
@@ -79,7 +80,7 @@ FIC Engine & Inspector offre :
 - **Gestion des encodages** : Support Windows-1252 et UTF-8
 - **Lecture optimisée** : Streaming pour fichiers volumineux (jusqu'à 10 GB)
 
-### 🌐 API REST
+### API REST
 
 - **Endpoints complets** pour CRUD (Create, Read, Update, Delete)
 - **Pagination native** pour grandes collections
@@ -88,7 +89,7 @@ FIC Engine & Inspector offre :
 - **Support SQL** : Exécution de requêtes SQL directement via l'API
 - **Support ODBC** : Intégration avec bases de données via ODBC
 
-### 🖥️ Interface graphique (Electron)
+### Interface graphique (Electron)
 
 - **Dashboard interactif** avec vue d'ensemble des tables
 - **Inspection visuelle** des enregistrements
@@ -98,14 +99,14 @@ FIC Engine & Inspector offre :
 - **Redimensionnement dynamique** des panneaux
 - **Interface moderne** avec thème sombre
 
-### 💻 CLI (Ligne de commande)
+### CLI (Ligne de commande)
 
 - **Scan automatique** de dossiers
 - **Export multi-formats** (JSON, CSV)
 - **Mode debug** pour analyse hexadécimale
 - **Serveur API** intégré
 
-### 🔌 Intégrations
+### Intégrations
 
 - **ODBC** : Connexion aux bases de données via DSN
 - **SQL** : Parser SQL simple pour requêtes SELECT, INSERT, UPDATE, DELETE
@@ -113,7 +114,7 @@ FIC Engine & Inspector offre :
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Prérequis
 
@@ -162,7 +163,7 @@ brew install node@18
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/votre-org/fic-engine.git
+git clone https://github.com/Samvel070903/HFSQL-Classic-Fic-inspector
 cd fic-engine
 
 # Compiler en mode release
@@ -216,7 +217,7 @@ npm run electron:dist
 
 ---
 
-## ⚡ Démarrage rapide
+## Démarrage rapide
 
 ### 1. Démarrer le serveur API
 
@@ -267,7 +268,7 @@ curl "http://localhost:8080/tables/MA_TABLE/records?limit=10"
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### Fichier de configuration (`config.toml`)
 
@@ -320,7 +321,7 @@ export FIC__STORAGE__READ_ONLY=false
 
 ---
 
-## 🌐 API REST
+## API REST
 
 ### Endpoints disponibles
 
@@ -510,21 +511,21 @@ Content-Type: application/json
 
 ---
 
-## 🖥️ Interface graphique
+## Interface graphique
 
 L'interface graphique **FIC Inspector** est une application Electron moderne offrant :
 
 ### Fonctionnalités principales
 
-- **📊 Dashboard** : Vue d'ensemble avec statistiques
-- **📋 Tables** : Liste interactive avec inspection détaillée
-- **💻 SQL/ODBC** : Éditeur SQL avec support ODBC et visualisation des relations
-- **📝 Logs** : Affichage des logs du serveur en temps réel
-- **⚙️ Paramètres** : Configuration de l'application
+- **Dashboard** : Vue d'ensemble avec statistiques
+- **Tables** : Liste interactive avec inspection détaillée
+- **SQL/ODBC** : Éditeur SQL avec support ODBC et visualisation des relations
+- **Logs** : Affichage des logs du serveur en temps réel
+- **Paramètres** : Configuration de l'application
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ### Vue d'ensemble
 
@@ -663,7 +664,7 @@ SQL Query
 
 ---
 
-## 🔒 Sécurité & Conformité
+## Sécurité & Conformité
 
 ### Protection des données
 
@@ -674,11 +675,11 @@ SQL Query
 
 ### Conformité RGPD / CNIL
 
-✅ **Respect de la vie privée** : Aucune collecte de données personnelles  
-✅ **Traitement local** : Toutes les données restent sur votre infrastructure  
-✅ **Pas de télémétrie** : Aucun envoi de données à des serveurs externes  
-✅ **Audit trail** : Logs locaux pour traçabilité  
-✅ **Chiffrement recommandé** : Utilisation de HTTPS en production  
+- **Respect de la vie privée** : Aucune collecte de données personnelles
+- **Traitement local** : Toutes les données restent sur votre infrastructure
+- **Pas de télémétrie** : Aucun envoi de données à des serveurs externes
+- **Audit trail** : Logs locaux pour traçabilité
+- **Chiffrement recommandé** : Utilisation de HTTPS en production
 
 ### Bonnes pratiques de sécurité
 
@@ -690,20 +691,20 @@ SQL Query
 
 ---
 
-## 📞 Support & Maintenance commerciale
+## Support & Maintenance commerciale
 
 ### Support communautaire
 
-- **GitHub Issues** : [https://github.com/votre-org/fic-engine/issues](https://github.com/votre-org/fic-engine/issues)
-- **Documentation** : Voir la [page d'aide complète](#-page-daide-complète) ci-dessous
-- **Discussions** : [GitHub Discussions](https://github.com/votre-org/fic-engine/discussions)
+- **GitHub Issues** : [https://github.com/Samvel070903/HFSQL-Classic-Fic-inspector/issues](https://github.com/Samvel070903/HFSQL-Classic-Fic-inspector)
+- **Documentation** : Voir la [page d'aide complète](#page-daide-complète) ci-dessous
+- **Discussions** : [GitHub Discussions](https://github.com/Samvel070903/HFSQL-Classic-Fic-inspector/discussions)
 
 ### Support professionnel
 
 Pour les entreprises et administrations nécessitant un support professionnel :
 
-📧 **Email** : samvelpro@gmail.com  
-🌐 **Site web** : [https://www.fic-engine.fr](https://www.fic-engine.fr)  
+**Email** : samvelpro@gmail.com  
+**Site web** : [https://www.fic-engine.fr](https://www.fic-engine.fr)
 
 **Services disponibles :**
 - Support technique prioritaire
@@ -714,7 +715,7 @@ Pour les entreprises et administrations nécessitant un support professionnel :
 
 ---
 
-## 📄 Licence
+## Licence
 
 Ce projet est distribué sous une double licence :
 
@@ -725,7 +726,7 @@ Vous pouvez choisir la licence qui vous convient le mieux.
 
 ---
 
-## 🤝 Contribution
+## Contribution
 
 Les contributions sont les bienvenues ! Consultez [CONTRIBUTING.md](CONTRIBUTING.md) pour les guidelines.
 
@@ -735,13 +736,13 @@ Les contributions sont les bienvenues ! Consultez [CONTRIBUTING.md](CONTRIBUTING
 
 **FIC Engine & Inspector** - Solution professionnelle pour l'accès aux données HFSQL
 
-[Documentation complète](#-page-daide-complète) • [API Reference](#-api-rest) • [Support](#-support--maintenance-commerciale)
+[Documentation complète](#page-daide-complète) • [API Reference](#api-rest) • [Support](#support--maintenance-commerciale)
 
 </div>
 
 ---
 
-# 📚 Page d'aide complète
+# Page d'aide complète
 
 ## Table des matières
 
@@ -993,7 +994,7 @@ Fichier .fic
 
 ### Étape 1 : Installation
 
-Voir la section [Installation](#-installation) ci-dessus.
+Voir la section [Installation](#installation) ci-dessus.
 
 ### Étape 2 : Préparer vos fichiers
 
@@ -1036,8 +1037,8 @@ cargo run --release -- serve
 Vous devriez voir :
 
 ```
-🚀 Serveur API démarré sur http://127.0.0.1:8080
-📋 Endpoints disponibles:
+Serveur API démarré sur http://127.0.0.1:8080
+Endpoints disponibles:
    GET  /health
    GET  /tables
    ...
@@ -1210,7 +1211,7 @@ La réponse inclut les données mémo dans le champ `memo_data`.
 
 **Type** : Fichier de données principal  
 **Format** : Binaire, enregistrements de taille fixe  
-**Encodage** : Windows-1252 (CP1252) par défaut  
+**Encodage** : Windows-1252 (CP1252) par défaut
 
 **Structure :**
 
@@ -1239,7 +1240,7 @@ Records (à partir de Data offset)
 
 **Type** : Fichier mémo (données de taille variable)  
 **Format** : Blocs de longueur variable  
-**Encodage** : Windows-1252 ou UTF-8  
+**Encodage** : Windows-1252 ou UTF-8
 
 **Structure :**
 
@@ -1259,7 +1260,7 @@ Block 1
 
 **Type** : Fichier d'index  
 **Format** : Index B-tree simplifié  
-**Usage** : Recherche rapide par clé  
+**Usage** : Recherche rapide par clé
 
 **Structure :**
 
@@ -1488,7 +1489,7 @@ files: [fichier1.fic, fichier2.fic, ...]
 }
 ```
 
-💡 **Astuce** : L'upload supporte des fichiers jusqu'à 10 GB.
+**Note** : L'upload supporte des fichiers jusqu'à 10 GB.
 
 #### POST /sql
 
@@ -1737,7 +1738,7 @@ cargo run --release -- debug CLIENT.FIC --dump records | head -20
 
 ## Bonnes pratiques
 
-### 🔒 Sécurité
+### Sécurité
 
 1. **Mode lecture seule en production**
    ```toml
@@ -1759,7 +1760,7 @@ cargo run --release -- debug CLIENT.FIC --dump records | head -20
    - Effectuer des sauvegardes avant toute modification
    - Utiliser des snapshots pour les gros volumes
 
-### 📊 Performance
+### Performance
 
 1. **Pagination systématique**
    ```bash
@@ -1775,7 +1776,7 @@ cargo run --release -- debug CLIENT.FIC --dump records | head -20
    - Les schémas sont mis en cache après la première lecture
    - Pas besoin de re-scanner à chaque requête
 
-### 🗂️ Organisation des fichiers
+### Organisation des fichiers
 
 ```
 projet/
@@ -1792,7 +1793,7 @@ projet/
 └── logs/              # Logs (optionnel)
 ```
 
-### 🔄 Migration de données
+### Migration de données
 
 1. **Exporter d'abord**
    ```bash
@@ -1806,6 +1807,7 @@ projet/
 3. **Importer progressivement**
    - Tester sur un sous-ensemble
    - Valider avant migration complète
+
 ---
 
 ## Notes techniques avancées
@@ -1855,24 +1857,24 @@ Table: CLIENT (10 000 enregistrements, 256 bytes/record)
 
 ### Version 0.2.0 (Q2 2024)
 
-- ✅ Support complet de l'écriture dans les fichiers .fic
-- ✅ Transactions atomiques
-- ✅ Support des B-trees complexes (.ndx)
-- ✅ Schéma externe (JSON/YAML)
+- Support complet de l'écriture dans les fichiers .fic
+- Transactions atomiques
+- Support des B-trees complexes (.ndx)
+- Schéma externe (JSON/YAML)
 
 ### Version 0.3.0 (Q3 2024)
 
-- 🔄 Compression des données
-- 🔄 Multi-threading pour lecture parallèle
-- 🔄 Cache avancé
-- 🔄 Support de formats additionnels
+- Compression des données
+- Multi-threading pour lecture parallèle
+- Cache avancé
+- Support de formats additionnels
 
 ### Version 1.0.0 (Q4 2024)
 
-- 🔄 API complète et stable
-- 🔄 Documentation exhaustive
-- 🔄 Tests de charge et performance
-- 🔄 Certification sécurité
+- API complète et stable
+- Documentation exhaustive
+- Tests de charge et performance
+- Certification sécurité
 
 ---
 
@@ -1882,16 +1884,16 @@ Table: CLIENT (10 000 enregistrements, 256 bytes/record)
 
 FIC Engine & Inspector est conçu pour respecter le Règlement Général sur la Protection des Données (RGPD) :
 
-- ✅ **Traitement local** : Toutes les données restent sur votre infrastructure
-- ✅ **Pas de collecte** : Aucune collecte de données personnelles
-- ✅ **Audit trail** : Logs locaux pour traçabilité
-- ✅ **Droit à l'oubli** : Suppression possible des données via l'API
+- **Traitement local** : Toutes les données restent sur votre infrastructure
+- **Pas de collecte** : Aucune collecte de données personnelles
+- **Audit trail** : Logs locaux pour traçabilité
+- **Droit à l'oubli** : Suppression possible des données via l'API
 
 ### Conformité CNIL
 
-- ✅ **Respect de la vie privée** : Aucune transmission de données
-- ✅ **Sécurité** : Chiffrement recommandé en production
-- ✅ **Accès contrôlé** : Authentification possible
+- **Respect de la vie privée** : Aucune transmission de données
+- **Sécurité** : Chiffrement recommandé en production
+- **Accès contrôlé** : Authentification possible
 
 ### Licence et garanties
 

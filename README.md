@@ -12,6 +12,7 @@
 [Installation](#-installation) • [Documentation](#-documentation) • [API](#-api-rest) • [Support](#-support--maintenance-commerciale)
 
 </div>
+
 ![Dashboard - Vue d'ensemble](docs/screen/Dashboard.png)
 *Dashboard principal avec statistiques et aperçu des tables*
 

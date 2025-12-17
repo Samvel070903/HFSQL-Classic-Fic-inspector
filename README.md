@@ -2,12 +2,11 @@
 ![Dashboard - Vue d'ensemble](docs/screen/Dashboard.png)
 *Dashboard principal avec statistiques et aperçu des tables*
 
-![Tables - Inspection détaillée](docs/screens/table-view.png)
-*Vue détaillée d'une table avec enregistrements et schéma*
-
 ![SQL Editor - Requêtes avancées](docs/screen/Querry-Studio.png)
 *Éditeur SQL avec historique et exemples de requêtes*
 
+![Tables - Inspection détaillée](docs/screens/Logs.png)
+*Vue détaillée des logs et des erreurs potentielles*
 <div align="center">
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)

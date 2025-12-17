@@ -54,7 +54,7 @@ Les fichiers HFSQL/HyperFile sont des formats binaires propriétaires utilisés 
 - **Maintenance** : Applications obsolètes, dépendances techniques, risques de perte de données
 - **Interopérabilité** : Difficulté d'intégration avec les systèmes modernes (APIs, bases de données)
 
-### Notre solution
+### La solution
 
 FIC Engine & Inspector offre :
 

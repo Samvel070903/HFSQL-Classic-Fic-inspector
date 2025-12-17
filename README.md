@@ -12,14 +12,11 @@
 
 </div>
 
-![Dashboard - Vue d'ensemble](docs/screen/Dashboard.png)
-*Dashboard principal avec statistiques et aperçu des tables*
+
 
 ![SQL Editor - Requêtes avancées](docs/screen/Querry-Studio.png)
 *Éditeur SQL avec historique et exemples de requêtes*
 
-![Tables - Inspection détaillée](docs/screen/Logs.png)
-*Vue détaillée des logs et des erreurs potentielles*
 
 ---
 

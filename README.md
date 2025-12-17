@@ -1,4 +1,12 @@
 # FIC Engine & Inspector
+![Dashboard - Vue d'ensemble](docs/screen/Dashboard.png)
+*Dashboard principal avec statistiques et aperçu des tables*
+
+![Tables - Inspection détaillée](docs/screens/table-view.png)
+*Vue détaillée d'une table avec enregistrements et schéma*
+
+![SQL Editor - Requêtes avancées](docs/screen/'Querry Studio.png')
+*Éditeur SQL avec historique et exemples de requêtes*
 
 <div align="center">
 
@@ -513,18 +521,6 @@ L'interface graphique **FIC Inspector** est une application Electron moderne off
 - **💻 SQL/ODBC** : Éditeur SQL avec support ODBC et visualisation des relations
 - **📝 Logs** : Affichage des logs du serveur en temps réel
 - **⚙️ Paramètres** : Configuration de l'application
-
-### Captures d'écran
-
-![Dashboard - Vue d'ensemble](docs/screen/Dashboard.png)
-*Dashboard principal avec statistiques et aperçu des tables*
-
-![Tables - Inspection détaillée](docs/screens/table-view.png)
-*Vue détaillée d'une table avec enregistrements et schéma*
-
-![SQL Editor - Requêtes avancées](docs/screen/'Querry Studio.png')
-*Éditeur SQL avec historique et exemples de requêtes*
-
 
 ---
 

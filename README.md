@@ -2142,6 +2142,6 @@ Les formats HFSQL/HyperFile sont des formats propriétaires. FIC Engine & Inspec
 
 **FIC Engine & Inspector** - Documentation complète v0.1.0
 
-Pour toute question : support@fic-engine.fr
+Pour toute question : samvelpro@gmail.com
 
 </div>

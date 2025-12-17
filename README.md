@@ -1,5 +1,7 @@
 # FIC Engine & Inspector
 
+![README](docs/screen/Banière.png)
+
 <div align="center">
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)

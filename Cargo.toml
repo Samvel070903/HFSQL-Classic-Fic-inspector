@@ -1,0 +1,64 @@
+[package]
+name = "fic-engine"
+version = "0.1.0"
+edition = "2021"
+authors = ["Samvel"]
+description = "Moteur bas niveau pour lire/écrire des fichiers HFSQL (.fic, .mmo, .ndx)"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+# HTTP Server
+axum = { version = "0.7", features = ["macros", "multipart"] }
+tokio = { version = "1", features = ["full"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace", "limit"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# CLI
+clap = { version = "4.4", features = ["derive"] }
+
+# Configuration
+config = "0.14"
+toml = "0.8"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Utilities
+byteorder = "1.5"
+csv = "1.3"
+hex = "0.4"
+encoding_rs = "0.8"
+regex = "1.10"
+odbc-api = "0.25"
+widestring = "0.5"
+once_cell = "1.19"
+rayon = "1.8"
+
+# Platform-specific dependencies for DSN management
+[target.'cfg(windows)'.dependencies]
+winreg = "0.52"
+
+[target.'cfg(not(windows))'.dependencies]
+ini = "1.3"
+
+[dev-dependencies]
+tempfile = "3.10"
+mockall = "0.12"
+
+[[bin]]
+name = "fic"
+path = "src/main.rs"
+
+[lib]
+name = "fic_engine"
+path = "src/lib.rs"
+

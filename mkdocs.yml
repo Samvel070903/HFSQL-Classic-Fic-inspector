@@ -1,0 +1,98 @@
+site_name: FIC Engine & Inspector Documentation
+site_description: Documentation complète pour FIC Engine & Inspector
+site_author: FIC Engine Team
+site_url: https://fic-engine.github.io
+
+theme:
+  name: material
+  palette:
+    # Thème sombre par défaut (correspond à l'application)
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    # Thème clair optionnel
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.code.copy
+
+extra_css:
+  - assets/css/custom.css
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Accueil: index.md
+  
+  - Démarrage:
+    - Installation: getting-started/installation.md
+    - Premiers pas: getting-started/first-steps.md
+    - Configuration: getting-started/configuration.md
+  
+  - Backend:
+    - Architecture: backend/architecture.md
+    - Module Core: backend/core-module.md
+    - Storage Engine: backend/storage-engine.md
+    - API Server: backend/api-server.md
+    - SQL & ODBC: backend/sql-odbc.md
+    - CLI: backend/cli-commands.md
+  
+  - Frontend:
+    - Architecture: frontend/architecture.md
+    - Pages: frontend/pages-overview.md
+    - Composants: frontend/components-guide.md
+    - Gestion d'état: frontend/state-management.md
+    - Intégration API: frontend/api-integration.md
+  
+  - Guides pratiques:
+    - Backend pas à pas: guides/step-by-step-backend.md
+    - Frontend pas à pas: guides/step-by-step-frontend.md
+    - Flux de données: guides/data-flow.md
+    - Dépannage: guides/troubleshooting.md
+  
+  - Référence API:
+    - REST API: api-reference/rest-api.md
+    - Types: api-reference/types.md
+    - Exemples: api-reference/examples.md
+  
+  - Avancé:
+    - Performance: advanced/performance.md
+    - Sécurité: advanced/security.md
+    - Extensibilité: advanced/extensibility.md
+
+plugins:
+  - search
+

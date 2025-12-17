@@ -1,0 +1,260 @@
+/* Styles personnalisés pour correspondre au thème de l'application FIC Inspector */
+
+:root {
+  /* Variables Material MkDocs - couleurs principales */
+  --md-primary-fg-color: #3b82f6;        /* blue-500 - couleur primaire */
+  --md-primary-fg-color--light: #60a5fa;  /* blue-400 - version claire */
+  --md-primary-fg-color--dark: #2563eb;   /* blue-600 - version foncée */
+  --md-accent-fg-color: #60a5fa;          /* blue-400 - couleur d'accent */
+  
+  /* Couleurs exactes de l'application FIC Inspector */
+  --fic-primary: #3b82f6;          /* blue-500 - couleur primaire */
+  --fic-primary-dark: #2563eb;      /* blue-600 - liens/boutons actifs */
+  --fic-primary-light: #60a5fa;     /* blue-400 - hover states */
+  --fic-background: #0f172a;        /* slate-900 - fond principal */
+  --fic-foreground: #f1f5f9;        /* slate-100 - texte principal */
+  --fic-border: #334155;            /* slate-700 - bordures */
+  --fic-secondary: #64748b;         /* slate-500 - texte secondaire */
+  --fic-sidebar-bg: #1e293b;        /* slate-800 - fond sidebar */
+  --fic-sidebar-border: #334155;    /* slate-700 - bordures sidebar */
+  --fic-text-secondary: #cbd5e1;    /* slate-300 - texte sidebar */
+  --fic-hover-bg: #475569;          /* slate-600 - fond hover */
+}
+
+/* Navigation principale (header) - couleur correspondant à l'application */
+.md-header {
+  background-color: var(--fic-background) !important;
+  border-bottom: 1px solid var(--fic-border);
+}
+
+.md-header__title {
+  color: var(--fic-foreground) !important;
+}
+
+.md-header__button {
+  color: var(--fic-foreground) !important;
+}
+
+.md-header__button:hover {
+  color: var(--fic-primary-light) !important;
+}
+
+/* Sidebar navigation - style comme dans l'application (slate-800) */
+.md-sidebar {
+  background-color: var(--fic-sidebar-bg) !important;
+}
+
+.md-nav {
+  background-color: transparent;
+}
+
+.md-nav__title {
+  background-color: var(--fic-sidebar-bg) !important;
+  border-bottom: 1px solid var(--fic-sidebar-border);
+  color: var(--fic-foreground) !important;
+}
+
+.md-nav__link {
+  color: var(--fic-text-secondary) !important;
+}
+
+.md-nav__link:hover {
+  color: var(--fic-foreground) !important;
+  background-color: var(--fic-hover-bg) !important;
+}
+
+.md-nav__link--active {
+  color: var(--fic-foreground) !important;
+  background-color: var(--fic-primary-dark) !important;
+  font-weight: 500;
+}
+
+.md-nav__item .md-nav__link--active {
+  background-color: var(--fic-primary-dark) !important;
+  color: white !important;
+}
+
+/* Liens dans le contenu */
+.md-typeset a {
+  color: var(--fic-primary);
+}
+
+.md-typeset a:hover {
+  color: var(--fic-primary-light);
+}
+
+/* Titres */
+.md-typeset h1 {
+  color: var(--fic-foreground);
+}
+
+.md-typeset h2 {
+  color: var(--fic-foreground);
+  border-bottom-color: var(--fic-border);
+}
+
+.md-typeset h3 {
+  color: var(--fic-foreground);
+}
+
+/* Code blocks - style sombre comme l'application */
+.md-typeset pre {
+  background-color: var(--fic-sidebar-bg);
+  border: 1px solid var(--fic-border);
+}
+
+.md-typeset pre > code {
+  background-color: transparent;
+  color: var(--fic-foreground);
+}
+
+.md-typeset code {
+  background-color: rgba(30, 41, 59, 0.5);
+  color: var(--fic-primary-light);
+  border: 1px solid var(--fic-border);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* Tables - style comme dans l'application */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--fic-border);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--fic-sidebar-bg);
+  border-bottom: 1px solid var(--fic-border);
+  color: var(--fic-foreground);
+  font-weight: 600;
+}
+
+.md-typeset table:not([class]) td {
+  border-bottom: 1px solid var(--fic-border);
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background-color: rgba(30, 41, 59, 0.5);
+}
+
+/* Admonitions */
+.md-typeset .admonition {
+  border-left-color: var(--fic-primary);
+}
+
+.md-typeset .admonition-title {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--fic-primary-light);
+}
+
+/* Search bar */
+.md-search__form {
+  background-color: var(--fic-sidebar-bg);
+}
+
+.md-search__input {
+  background-color: var(--fic-sidebar-bg);
+  border: 1px solid var(--fic-border);
+  color: var(--fic-foreground);
+}
+
+.md-search__input::placeholder {
+  color: var(--fic-secondary);
+}
+
+.md-search__input:hover,
+.md-search__input:focus {
+  background-color: var(--fic-sidebar-bg);
+  border-color: var(--fic-primary);
+}
+
+.md-search__icon {
+  color: var(--fic-secondary);
+}
+
+/* Résultats de recherche */
+.md-search__output {
+  background-color: var(--fic-sidebar-bg);
+  border: 1px solid var(--fic-border);
+}
+
+.md-search__item {
+  color: var(--fic-foreground);
+}
+
+.md-search__item:hover {
+  background-color: var(--fic-hover-bg);
+}
+
+/* Boutons et éléments interactifs */
+.md-typeset .md-button {
+  background-color: var(--fic-primary-dark);
+  color: white;
+  border: none;
+}
+
+.md-typeset .md-button:hover {
+  background-color: var(--fic-primary);
+}
+
+.md-typeset .md-button--primary {
+  background-color: var(--fic-primary-dark);
+}
+
+/* Accent color pour les éléments importants */
+.md-typeset mark {
+  background-color: rgba(59, 130, 246, 0.3);
+  color: var(--fic-foreground);
+}
+
+/* Scrollbar - style comme dans l'application */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--fic-sidebar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--fic-secondary);
+}
+
+/* Tabs navigation */
+.md-tabs {
+  background-color: var(--fic-sidebar-bg);
+  border-bottom: 1px solid var(--fic-border);
+}
+
+.md-tabs__link {
+  color: var(--fic-text-secondary);
+}
+
+.md-tabs__link:hover {
+  color: var(--fic-foreground);
+}
+
+.md-tabs__link--active {
+  color: var(--fic-primary-light);
+  border-bottom-color: var(--fic-primary);
+}
+
+/* Footer */
+.md-footer {
+  background-color: var(--fic-background);
+  border-top: 1px solid var(--fic-border);
+}
+
+.md-footer__link {
+  color: var(--fic-text-secondary);
+}
+
+.md-footer__link:hover {
+  color: var(--fic-primary-light);
+}
+

@@ -1,0 +1,54 @@
+appId: com.ficengine.inspector
+productName: FIC Inspector
+directories:
+  output: release
+  buildResources: assets
+files:
+  - dist/**/*
+  - dist-electron/**/*
+  - package.json
+  - site/**/*
+asarUnpack:
+  - dist-electron/**/*
+  - site/**/*
+win:
+  target:
+    - target: portable
+      arch:
+        - x64
+    - target: nsis
+      arch:
+        - x64
+  icon: assets/icon.ico
+  sign: false
+  signDlls: false
+  signingHashAlgorithms: []
+  verifyUpdateCodeSignature: false
+linux:
+  target:
+    - target: AppImage
+      arch:
+        - x64
+    - target: deb
+      arch:
+        - x64
+    - target: rpm
+      arch:
+        - x64
+  icon: assets/icon.png
+  category: Utility
+  desktop:
+    Name: FIC Inspector
+    Comment: Interface graphique pour inspecter les fichiers HFSQL
+    Categories: Development;Utility;
+    Keywords: database;sql;hfsql;inspection;
+mac:
+  target: dmg
+  icon: assets/icon.icns
+  category: public.app-category.developer-tools
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+

@@ -1,0 +1,288 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Variables CSS dynamiques - seront définies par le thème */
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --border: #334155;
+  --primary: #3b82f6;
+  --secondary: #64748b;
+  --accent: #60a5fa;
+  
+  /* Sidebar */
+  --sidebar-bg: #1e293b;
+  --sidebar-border: #334155;
+  --sidebar-text: #f1f5f9;
+  --sidebar-active: #3b82f6;
+  --sidebar-hover: #334155;
+  
+  /* StatusBar */
+  --statusbar-bg: #1e293b;
+  --statusbar-border: #334155;
+  --statusbar-text: #cbd5e1;
+  
+  /* Card */
+  --card-bg: #1e293b;
+  --card-border: #334155;
+  --card-text: #f1f5f9;
+  
+  /* Input */
+  --input-bg: #1e293b;
+  --input-border: #475569;
+  --input-text: #f1f5f9;
+  --input-placeholder: #94a3b8;
+  --input-focus: #3b82f6;
+  
+  /* Button */
+  --button-primary: #3b82f6;
+  --button-primary-hover: #2563eb;
+  --button-secondary: #475569;
+  --button-secondary-hover: #64748b;
+  
+  /* Scrollbar */
+  --scrollbar-track: #1e293b;
+  --scrollbar-thumb: #475569;
+  --scrollbar-thumb-hover: #64748b;
+  
+  /* Menubar */
+  --menubar-bg: #1e293b;
+  --menubar-border: #334155;
+  --menubar-text: #f1f5f9;
+  --menubar-hover: #334155;
+  --menubar-active: #3b82f6;
+  --menubar-active-text: #ffffff;
+  --menubar-dropdown-bg: #1e293b;
+  --menubar-dropdown-border: #334155;
+  --menubar-dropdown-text: #f1f5f9;
+  --menubar-dropdown-hover: #334155;
+  --menubar-dropdown-separator: #334155;
+  --menubar-controls-text: #f1f5f9;
+  --menubar-controls-hover: #475569;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow: hidden;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Classes utilitaires pour les thèmes */
+@layer utilities {
+  .bg-theme-background {
+    background-color: var(--background);
+  }
+  
+  .bg-theme-sidebar {
+    background-color: var(--sidebar-bg);
+  }
+  
+  .bg-theme-statusbar {
+    background-color: var(--statusbar-bg);
+  }
+  
+  .bg-theme-card {
+    background-color: var(--card-bg);
+  }
+  
+  .text-theme-foreground {
+    color: var(--foreground);
+  }
+  
+  .text-theme-sidebar {
+    color: var(--sidebar-text);
+  }
+  
+  .text-theme-statusbar {
+    color: var(--statusbar-text);
+  }
+  
+  .text-theme-card {
+    color: var(--card-text);
+  }
+  
+  .border-theme {
+    border-color: var(--border);
+  }
+  
+  .border-theme-sidebar {
+    border-color: var(--sidebar-border);
+  }
+  
+  .border-theme-statusbar {
+    border-color: var(--statusbar-border);
+  }
+  
+  .border-theme-card {
+    border-color: var(--card-border);
+  }
+  
+  .bg-theme-primary {
+    background-color: var(--primary);
+  }
+  
+  .bg-theme-secondary {
+    background-color: var(--button-secondary);
+  }
+  
+  .bg-theme-sidebar-active {
+    background-color: var(--sidebar-active);
+  }
+  
+  .text-theme-primary {
+    color: var(--primary);
+  }
+  
+  .text-theme-accent {
+    color: var(--accent);
+  }
+  
+  .ring-theme-focus:focus {
+    --tw-ring-color: var(--input-focus);
+  }
+  
+  /* Hover states */
+  .bg-theme-primary:hover {
+    background-color: var(--button-primary-hover);
+  }
+  
+  .bg-theme-secondary:hover {
+    background-color: var(--button-secondary-hover);
+  }
+  
+  .bg-theme-sidebar-hover:hover {
+    background-color: var(--sidebar-hover);
+  }
+  
+  .bg-theme-input {
+    background-color: var(--input-bg);
+  }
+  
+  .border-theme-input {
+    border-color: var(--input-border);
+  }
+  
+  .text-theme-input {
+    color: var(--input-text);
+  }
+  
+  .placeholder-theme-input::placeholder {
+    color: var(--input-placeholder);
+  }
+  
+  /* Additional theme classes for specific elements */
+  .bg-theme-table {
+    background-color: var(--card-bg);
+  }
+  
+  .bg-theme-table-header {
+    background-color: var(--card-bg);
+  }
+  
+  .bg-theme-table-row-hover:hover {
+    background-color: var(--sidebar-hover);
+  }
+  
+  .text-theme-muted {
+    color: var(--statusbar-text);
+    opacity: 0.75;
+  }
+  
+  .text-theme-secondary {
+    color: var(--statusbar-text);
+  }
+  
+  .border-theme-table {
+    border-color: var(--card-border);
+  }
+  
+  /* Menubar theme classes */
+  .bg-theme-menubar {
+    background-color: var(--menubar-bg);
+  }
+  
+  .border-theme-menubar {
+    border-color: var(--menubar-border);
+  }
+  
+  .text-theme-menubar {
+    color: var(--menubar-text);
+  }
+  
+  .bg-theme-menubar-hover:hover {
+    background-color: var(--menubar-hover);
+  }
+  
+  .bg-theme-menubar-active {
+    background-color: var(--menubar-active);
+  }
+  
+  .text-theme-menubar-active {
+    color: var(--menubar-active-text);
+  }
+  
+  .bg-theme-menubar-dropdown {
+    background-color: var(--menubar-dropdown-bg);
+  }
+  
+  .border-theme-menubar-dropdown {
+    border-color: var(--menubar-dropdown-border);
+  }
+  
+  .text-theme-menubar-dropdown {
+    color: var(--menubar-dropdown-text);
+  }
+  
+  .bg-theme-menubar-dropdown-hover:hover {
+    background-color: var(--menubar-dropdown-hover);
+  }
+  
+  .bg-theme-menubar-dropdown-separator {
+    background-color: var(--menubar-dropdown-separator);
+  }
+  
+  .text-theme-menubar-controls {
+    color: var(--menubar-controls-text);
+  }
+  
+  .bg-theme-menubar-controls-hover:hover {
+    background-color: var(--menubar-controls-hover);
+  }
+}
+

@@ -34,15 +34,7 @@ FIC Engine & Inspector est un outil qui vous permet de lire et d'explorer vos fi
 
 ## Installation
 
-### Option 1 : Utiliser l'interface graphique (recommandé)
-
-1. **Téléchargez l'application** depuis la [page des releases](https://github.com/Samvel070903/HFSQL-Classic-Fic-inspector/releases)
-2. **Installez l'application** selon votre système d'exploitation :
-   - Windows : Exécutez le fichier `.exe`
-   - Linux : Exécutez le fichier `.AppImage`
-   - macOS : Ouvrez le fichier `.dmg`
-
-### Option 2 : Compiler depuis les sources
+###  Compiler depuis les sources
 
 #### Prérequis
 

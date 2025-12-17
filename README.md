@@ -5,7 +5,7 @@
 ![Tables - Inspection détaillée](docs/screens/table-view.png)
 *Vue détaillée d'une table avec enregistrements et schéma*
 
-![SQL Editor - Requêtes avancées](docs/screen/'Querry Studio.png')
+![SQL Editor - Requêtes avancées](docs/screen/Querry-Studio.png)
 *Éditeur SQL avec historique et exemples de requêtes*
 
 <div align="center">
